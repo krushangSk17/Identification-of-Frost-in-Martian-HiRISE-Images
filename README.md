@@ -17,8 +17,17 @@
   - Test Precision: 95.70%
   - Test Recall: 80.46%
   - F1 Score: 0.874
+    
+### 2. VGG16
+- **Architecture:** Based on the VGG16 base model, with added layers including global average pooling, dense, batch normalization, dropout, and output layer. The base model layers are frozen.
+- **Methodology:** Trained for 10 epochs with early stopping and model checkpoint callbacks. Used TensorFlow datasets with augmented training data.
+- **Performance Metrics:**
+  - Test Accuracy: 91.69%
+  - Test Precision: 96.05%
+  - Test Recall: 91.06%
+  - F1 Score: 0.935
 
-### 2. EfficientNetB0
+### 3. EfficientNetB0
 - **Architecture:** Utilizes EfficientNetB0 as the base model, with added global average pooling, dense, batch normalization, dropout, and output layers. The base model layers are frozen.
 - **Methodology:** Trained for 10 epochs with early stopping and model checkpoint callbacks on augmented TensorFlow datasets.
 - **Performance Metrics:**
@@ -27,7 +36,7 @@
   - Test Recall: 100%
   - F1 Score: 0.792
 
-### 3. ResNet50
+### 4. ResNet50
 - **Architecture:** Builds upon the ResNet50 base model with additional global average pooling, dense, batch normalization, dropout, and output layers. The base model layers are frozen.
 - **Methodology:** Compiled with binary cross-entropy loss and metrics including accuracy, precision, and recall. Specific training methodology details are not provided.
 - **Performance Metrics:**
@@ -36,14 +45,7 @@
   - Test Recall: 51.21%
   - F1 Score: 0.669
 
-### 4. VGG16
-- **Architecture:** Based on the VGG16 base model, with added layers including global average pooling, dense, batch normalization, dropout, and output layer. The base model layers are frozen.
-- **Methodology:** Trained for 10 epochs with early stopping and model checkpoint callbacks. Used TensorFlow datasets with augmented training data.
-- **Performance Metrics:**
-  - Test Accuracy: 91.69%
-  - Test Precision: 96.05%
-  - Test Recall: 91.06%
-  - F1 Score: 0.935
+
 
 ### Summary and Analysis
 - The **CNN + MLP Model** and **VGG16** show higher test accuracies and F1 scores compared to **EfficientNetB0** and **ResNet50**. This could be due to the differences in architecture complexity and training methodologies.
